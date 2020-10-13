@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>demo-01-servlet</module>
+        <module>demo-02-springmvc</module>
     </modules>
 
     <dependencies>

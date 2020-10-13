@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    1.处理器映射器-->
+        <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+<!--    2.处理器适配器-->
+        <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+<!--    3.视图解析器-->
+        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+            <property name="prefix" value="/WEB-INF/jsp/"></property>
+            <property name="suffix" value=".jsp"></property>
+        </bean>
+<!--    4.处理映射器按照name查找,这里的hellow对应web.xml中的url-pattern，必须一致-->
+        <bean id="/hellow" class="com.yao.controller.HelloController"></bean>
+</beans>
